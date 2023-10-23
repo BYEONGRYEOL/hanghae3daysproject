@@ -12,7 +12,7 @@ bp = Blueprint('signup', __name__, url_prefix='/signup')
 # 3. app을 bp로 교체
 @bp.route('/', methods=['GET', 'POST'])
 def signUp():
-    print("signup페이지 이동")
+    # print("signup페이지 이동")
     if request.method == 'POST':
         # print(request.form)
         username = request.form['username']
@@ -41,7 +41,7 @@ def signUp():
             print('회원가입이 완료되었습니다!', 'success')
             return jsonify({'result': 'success'})
 
-    print("get 요청시")
+    # print("get 요청시")
     return render_template('signup.html')
 
 
